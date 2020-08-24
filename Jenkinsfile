@@ -3,7 +3,9 @@ pipeline {
         buildDiscarder(logRotator(numToKeepStr:'10'))
         timestamps()
     }
-    agent any
+    agent {
+        label 'docker-in-docker docker base'
+    }
     stages {
         stage('Clean Workspace') {
             steps {
