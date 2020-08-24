@@ -42,7 +42,7 @@ pipeline {
             echo 'Unstable'
         }
         always {
-            echo 'Build done'
+            echo 'Build done !!'
         }
     }
 }
